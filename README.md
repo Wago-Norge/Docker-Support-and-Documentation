@@ -1,5 +1,5 @@
 # Veiledning og Inspirasjon
->Dette repoet er tiltenkt å veilede igjennom både dokumentasjon og videoer, samt inspirere ved å linke til nye konsepter illustrert av ivrige wago-videobloggere. Repoet inneholder også en kjapp veiledning på igangsetting av Wago PLS'er.
+>Dette repoet er tiltenkt å veilede igjennom både dokumentasjon og videoer, samt inspirere ved å linke til nye konsepter illustrert av ivrige wago-videobloggere. Repoet inneholder også en kjapp veiledning for igangsetting av Wago PLS'er, i tillegg til veiledning rundt viderekommen bruk.
 
 ### Initiellt Oppsett
 
@@ -10,7 +10,7 @@ Under følger hovedtrinnene for å starte programutvikling på Wago Ethernet PLS
   <img src="img\hardware_setup.PNG" width="600"><br><br>
 </div>
 
-2. Foruten riktig tilførsel (24V) krever et vellykket oppsett at PLS og PC eksisterer på samme IP-subnett.\
+2. Foruten riktig tilførsel (24V), krever et vellykket oppsett at PLS og PC eksisterer på samme IP-subnett.\
 Dette betyr at de tre første siffergruppene i begge IP-adressene må være identiske, for eksempel: 192.168.1.\<X>\
 Sett derfor IP adressen på PC'en i henhold til dette
 
@@ -19,7 +19,7 @@ Sett derfor IP adressen på PC'en i henhold til dette
   <img src="img\IP_Setup.PNG" width="600"><br><br>
 </div>
 
-3. Gjør deretter en link-verifisering ved å logge inn på 192.168.1.\<X> og sjekke at nettsiden for PLS'en er tilgjengelig\
+3. Gjør deretter en link-verifisering ved å logge inn på 192.168.1.\<X> og sjekke at nettsiden for PLS'en er tilgjengelig.\
 Logg deretter inn med `brukernavn / passord = admin / wago`
 
 
@@ -47,13 +47,22 @@ Logg deretter inn med `brukernavn / passord = admin / wago`
 Om applikasjonen du leter etter ikke er listet opp kan du fort finne den ved et søk blant [alle applikasjoner](https://www.wago.com/global/search?q=*:downloadcontainerdate:resultType:download:docCategory1:DL_3:docCategory1:DL_58&ststate=eyJkb3dubG9hZCI6Ii9zZWFyY2g/cVx1MDAzZColM0FyZWxldmFuY2UlM0FyZXN1bHRUeXBlJTNBZG93bmxvYWQlM0Fkb2NDYXRlZ29yeTElM0FETF8zXHUwMDI2c29ydFx1MDAzZGRvd25sb2FkY29udGFpbmVyZGF0ZSJ9).\
 Det fins også en nyttig [Verktøykasse](http://www.wago.no/automasjon/tools/WagoBasicTools.html) med alle vanlige Wago verktøy.
 
+
+### Viderekommen bruk
+
+Hvis du er software utvikler eller en erfaren bruker, og du ønsker å utnytte utstyrets kapabilitet til det fulleste, er Wago's nyeste PLS'er midt i blinket. Her har vi åpnet PLS'ene og gjort kildekoden open source med et eget [firmware SDK](https://github.com/WAGO/pfc-firmware-sdk). Dette gir uante muligheter og knytter sammen automasjons-, og software utviklingsverden.
+En av våre nyeste PLS'er PFC200 G2, støtter Docker, som er et verktøy laget for å gjøre det enklere å lage, installere, og kjøre applikasjoner ved bruk av containere. Containere gir utviklere muligheten til å pakke ferdig en applikasjon med alle delene som trengs, som bibloteker og andre avhengigheter, og sende alt ut som en ferdig pakke. Du kan finne mer informasjon og hvordan sette opp PLS'en med Docker og mye mer i vårt [Docker-Suport](https://github.com/Wago-Norge/Docker-Support) repo.
+
+Wago Tyskland har også laget en fin samling med [how-to's](https://github.com/WAGO/pfc-howtos) for forskjellige applikasjonsmuligheter på PCF100, PFC200 og PFC200 G2.
+
+
 ### Kontaktinformasjon
 
 
 Vår tekniske supportavdeling har telefontid hverdager 8-16, hele året utenom helligdager.
 
 | Stilling          | Navn              | Kontor   | Mobil    |
-| ----------------- |:-----------------:| --------:| --------:|
+| ----------------- |:-----------------:| :-------:| :-------:|
 | Teknisk leder     | Torgeir Sundet    | 22309453 | 97195836 |
 | Teknisk konsulent | Kristian Syversen | 22309458 | 93605571 |
 | Teknisk konsulent | Thorgrim Jansrud  | 22309464 | 91146947 |
