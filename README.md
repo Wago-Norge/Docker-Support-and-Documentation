@@ -68,3 +68,6 @@ Vår tekniske supportavdeling har telefontid hverdager 8-16, hele året utenom h
 | Teknisk konsulent | Thorgrim Jansrud  | 22309464 | 91146947 |
 
 Vi hjelper gjerne med fjernhjelp via [TeamViewer](https://download.teamviewer.com/download/TeamViewerQS.exe), og du kan også nå oss på [support.no@wago.com](mailto:support.no@wago.com)
+
+
+### EOF
