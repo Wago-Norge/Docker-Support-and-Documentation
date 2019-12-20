@@ -50,7 +50,7 @@ This guide assumes that you have already installed the latest firmware on your P
     The editor should look like this:
 <div align="center">
     <br>
-  <img src="img\node-red1.png"><br><br>
+  <img src="img\node_red1.png"><br><br>
 </div>
 
 The editor consists of the nodes (to the left), the flow (in the middle) and the sidebar (to the right). The menu at the top right can be used to display
@@ -60,7 +60,7 @@ You can use this to observe how data flows through the different nodes:
 Insert an inject node, and then send it to a debug node. You will then observe the msg object in the debug field:
 <div align="center">
     <br>
-  <img src="img\node-red2.png"><br><br>
+  <img src="img\node_red2.png"><br><br>
 </div>
 
 The debug node that is used here, prints the “whole” msg object. Not just msg.payload. Keep in mind that you can alter this object, or create your own -
@@ -88,7 +88,7 @@ Thirdly, we need an XML node that converts the data from XML to JSON. These are 
 like in XML, click the link in step 1. At the end, we should apply a debug node, so that we can observe the data.
 <div align="center">
     <br>
-  <img src="img\node-red3.png"><br><br>
+  <img src="img\node_red3.png"><br><br>
 </div>
 
 
@@ -106,7 +106,7 @@ There are many ways to Rome - but one way to select the specific data we want, i
 msg object. It can however modify the object, and more, based on the msg. Here, we can use classic OOP-programming - a safe haven if Node-RED sometimes confuses you.
 <div align="center">
     <br>
-  <img src="img\node-red4.png"><br><br>
+  <img src="img\node_red4.png"><br><br>
 </div>
 
 4.  Debug
@@ -115,7 +115,7 @@ you can observe the same message (collapsed) appearing, but from different nodes
 msg appear, with other values. Below is the message expanded.
 <div align="center">
     <br>
-  <img src="img\node-red5.png"><br><br>
+  <img src="img\node_red5.png"><br><br>
 </div>
 
 5.  Write code:
@@ -125,7 +125,7 @@ We then reformat msg.payload, to only contain the three values. We could also ju
 The result is two msg objects that are very similar, except that their payloads vary:
 <div align="center">
     <br>
-  <img src="img\node-red5.png"><br><br>
+  <img src="img\node_red5.png"><br><br>
 </div>
 
 With this, we could easily pass specific values, for specific times, onwards. The values can instantly be sent to the PLCs’ environment e!Cockpit, or we could use
