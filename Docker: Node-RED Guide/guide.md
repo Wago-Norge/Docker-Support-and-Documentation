@@ -1,4 +1,5 @@
-#Node-RED Tutorial
+# Node-RED 
+Tutorial
 If anything is unclear, please do not hesitate to contact me at [hakon.skaug@wago.com](mailto:hakon.skaug@wago.com)
 
 “Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.” (www.nodered.org)
@@ -90,7 +91,6 @@ like in XML, click the link in step 1. At the end, we should apply a debug node,
     <br>
   <img src="img\node_red3.png"><br><br>
 </div>
-
 
 The data will end up as a parsed JSON string. We can use dot-notation or array-notation to retrieve the data we want.
 
