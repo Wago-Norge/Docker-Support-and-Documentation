@@ -1,5 +1,5 @@
 # Veiledning og Inspirasjon
->Dette repoet er tiltenkt å veilede igjennom både dokumentasjon og videoer, samt inspirere ved å linke til nye konsepter illustrert av ivrige wago-videobloggere. Repoet inneholder også en kjapp veiledning for igangsetting av Wago PLS'er, i tillegg til veiledning rundt viderekommen bruk.
+>Dette repoet er tiltenkt å veilede igjennom både dokumentasjon og videoer, samt inspirere ved å linke til nye konsepter illustrert av ivrige Wago-videobloggere. Repoet inneholder også en kjapp veiledning for igangsetting av Wago PLS'er, i tillegg til veiledning rundt viderekommen bruk.
 
 ### Initiellt Oppsett
 
@@ -50,8 +50,8 @@ Det fins også en nyttig [Verktøykasse](http://www.wago.no/automasjon/tools/Wag
 
 ### Viderekommen bruk
 
-Hvis du er software utvikler eller en erfaren bruker, og du ønsker å utnytte utstyrets kapabilitet til det fulleste, er Wago's nyeste PLS'er midt i blinken. Her har vi åpnet PLS'ene og gjort kildekoden open source med et eget [firmware SDK](https://github.com/WAGO/pfc-firmware-sdk). Dette gir uante muligheter og knytter sammen automasjons-, og software utviklingsverden.
-En av våre nyeste PLS'er PFC200 G2, støtter Docker, som er et verktøy laget for å gjøre det enklere å lage, installere, og kjøre applikasjoner ved bruk av containere. Containere gir utviklere muligheten til å pakke ferdig en applikasjon med alle delene som trengs, som bibloteker og andre avhengigheter, og sende alt ut som en ferdig pakke. Du kan finne mer informasjon og hvordan sette opp PLS'en med Docker og mye mer i vårt [Docker-Suport](https://github.com/Wago-Norge/Docker-Support) repo.
+Hvis du er softwareutvikler eller en erfaren bruker, og du ønsker å utnytte utstyrets kapabilitet til det fulleste, er Wago's nyeste PLS'er midt i blinken. Her har vi åpnet PLS'ene og gjort kildekoden open source med et eget [firmware SDK](https://github.com/WAGO/pfc-firmware-sdk). Dette gir uante muligheter og knytter sammen automasjons-, og softwareutviklingsverden.
+En av våre nyeste PLS'er PFC200 G2, støtter Docker, som er et verktøy laget for å gjøre det enklere å lage, installere, og kjøre applikasjoner ved bruk av containere. Containere gir utviklere muligheten til å pakke ferdig en applikasjon med alle delene som trengs, som biblioteker og andre avhengigheter, og sende alt ut som en ferdig pakke. Du kan finne mer informasjon og hvordan sette opp PLS'en med Docker og mye mer i vårt [Docker-Suport](https://github.com/Wago-Norge/Docker-Support) repo.
 
 Wago Tyskland har også laget en fin samling med [how-to's](https://github.com/WAGO/pfc-howtos) for forskjellige applikasjonsmuligheter på PCF100, PFC200 og PFC200 G2.
 
@@ -66,6 +66,7 @@ Vår tekniske supportavdeling har telefontid hverdager 8-16, hele året utenom h
 | Teknisk leder     | Torgeir Sundet    | 22309453 | 97195836 |
 | Teknisk konsulent | Kristian Syversen | 22309458 | 93605571 |
 | Teknisk konsulent | Thorgrim Jansrud  | 22309464 | 91146947 |
+| Teknisk konsulent | Håkon Skaug I.    | 22309478 | 97479678 |
 
 Vi hjelper gjerne med fjernhjelp via [TeamViewer](https://download.teamviewer.com/download/TeamViewerQS.exe), og du kan også nå oss på [support.no@wago.com](mailto:support.no@wago.com)
 
