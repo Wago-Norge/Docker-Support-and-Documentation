@@ -1,5 +1,4 @@
-# Node-RED 
-Tutorial
+# Node-RED Tutorial
 If anything is unclear, please do not hesitate to contact me at [hakon.skaug@wago.com](mailto:hakon.skaug@wago.com)
 
 “Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.” (www.nodered.org)
