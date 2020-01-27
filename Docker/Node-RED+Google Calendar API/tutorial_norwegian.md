@@ -20,15 +20,39 @@ Dette dokumentet skal beskrive måten man kan gå frem på for å kunne hente ka
 1.  Importer flow for Node-Red:
     Gå til grensesnittet for Node-Red ```(typisk 192.168.1.xx:1880)```.
     Under menyen øverst til høyre: velg “Import”.
-    Importer ved å kopiere inn JSON-stringen som er inkludert nederst i dette dokumentet.
-2.  Installer “node-red-contrib-google”.
+    Importer ved å kopiere inn JSON-stringen som er inkludert i denne mappen: ```import.txt```.
+2.  Installer biblioteket:
     Under menyen øverst til høyre: velg “Manage Palettes”. 
-    Klikk “Install”, og søk opp riktig palette. 
+    Klikk “Install”, og søk opp riktig palette: ```node-red-contrib-google```. 
 3.  Sett opp “google”-noden:
     Sørg for at API står som “calendar:v3” (med mindre du ønsker å bruke andre APIer).
-    Operation kan velges til “events.list”. Her kan man velge andre operations, etter hva som passer. (Dette vil gi forskjellige eventer, lister, kalendere, etc. som output). Events.list vil gi oss en array av nåværende og kommende eventer.
+    Operation kan velges til “events.list”. Her kan man velge andre operations, etter hva som passer. (Dette vil gi forskjellige             resultater. Events.list vil gi oss en array av nåværende og kommende eventer.
 4.  Konfigurer “google-conn”:
     Dette skal gjøres i “Connection” i “google”-noden i forrige steg.
 5.  Konfigurer “set”-noden. Legg inn Calendar ID her.
 
-For hjelp: klikk deg inn på Documentation-noden
+### API-kall med parametre
+Ved å sende en msg med spesifikke parametre gjennom Google-noden, får vi et spesifikt svar tilbake. De forskjellige parametrene kan finnes i linken helt nederst.
+Et msg-objekt ser gjerne slik ut:
+```
+msg = {
+    _msgid: "7aacba.c7ac34",
+    topic: "",
+    payload: "",
+}
+```
+Vi kan legge parametrene vi ønsker å kalle med under msg.payload, som følger:
+```
+msg.payload = {
+    calendarId: hypotheticalEmail_lh2luhofjq8jj2nhib0@group.calendar.google.com,
+    timeMin: "2020-01-27T15:51:31.151Z",
+    timeMax: "2020-01-27T18:40:00.000Z",
+    orderBy: "startTime",
+    singleEvents: true
+}
+```
+Disse kan være nyttige parametre for å filtrere resultatet som mottas fra Google. KalenderID er hvilken kalender du er koblet til. timeMin og timeMax filtrerer ut resultater utenfor dette tidsperspektive. Du kan gjerne bare bruke én av disse. orderBy sorterer resultatene etter når de starter - ikke når de ble laget.
+
+For hjelp: 
+-   https://developers.google.com/calendar/v3/reference/events/list
+-   Klikk deg inn på Documentation-noden
