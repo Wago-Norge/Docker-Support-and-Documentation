@@ -1,0 +1,3 @@
+Import this JSON-string in Node-RED:
+
+[{"id":"b9a3d2a1.07762","type":"google","z":"9247db84.f39e48","name":"","google":"734034bf.de23bc","api":"calendar:v3","operation":"events.list","x":850,"y":340,"wires":[["443ec0a4.d37cb"]]},{"id":"734034bf.de23bc","type":"google-conn","z":"","name":"Google","key":"{\n  \n}","scopes":"https://www.googleapis.com/auth/calendar"}]
