@@ -53,6 +53,9 @@ msg.payload = {
 ```
 Disse kan være nyttige parametre for å filtrere resultatet som mottas fra Google. KalenderID er hvilken kalender du er koblet til. timeMin og timeMax filtrerer ut resultater utenfor dette tidsperspektive. Du kan gjerne bare bruke én av disse. orderBy sorterer resultatene etter når de starter - ikke når de ble laget.
 
+Tips: 
+-   API'et foretrekker å få tiden gitt i formatet ovenfor. Ved å bruke biblioteket node-red-contrib-moment kan du enkelt formatere tiden slik, i tillegg til å kunne justere tiden for tidssoner, sommer- og vintertid, og lignende.
+
 For hjelp: 
 -   https://developers.google.com/calendar/v3/reference/events/list
 -   Klikk deg inn på Documentation-noden
