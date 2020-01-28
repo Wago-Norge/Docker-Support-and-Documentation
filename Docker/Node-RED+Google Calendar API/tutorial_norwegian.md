@@ -29,7 +29,7 @@ Dette dokumentet skal beskrive måten man kan gå frem på for å kunne hente ka
     Operation kan velges til “events.list”. Her kan man velge andre operations, etter hva som passer. (Dette vil gi forskjellige             resultater. Events.list vil gi oss en array av nåværende og kommende eventer.
 4.  Konfigurer “google-conn”:
     Dette skal gjøres i “Connection” i “google”-noden i forrige steg.
-5.  Konfigurer “set”-noden. Legg inn Calendar ID her.
+5.  Konfigurer “Msg parameters”-noden. Legg inn Calendar ID her.
 
 ### API-kall med parametre
 Ved å sende en msg med spesifikke parametre gjennom Google-noden, får vi et spesifikt svar tilbake. De forskjellige parametrene kan finnes i linken helt nederst.
