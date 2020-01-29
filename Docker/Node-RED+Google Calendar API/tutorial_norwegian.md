@@ -1,6 +1,6 @@
 # Google Calendar API i Node-RED
+Dette dokumentet skal beskrive måten man kan gå frem på for å kunne hente kalenderdata fra Google Calendar i et Node-Red-miljø. Eksempelet som er inkludert i ```import.txt``` bruker en kalender og autentisering som er generert i Wago for å kunne illustrere dette programmets virkemåte. For å bruke dette til eget bruk, må stegene nedenfor følges.
 
-Dette dokumentet skal beskrive måten man kan gå frem på for å kunne hente kalenderdata fra Google Calendar i et Node-Red-miljø.
 
 ### Sett opp Google:
 1.  Lag en Google-konto (gmail).
