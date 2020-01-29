@@ -74,7 +74,7 @@ means of communicating, the value we want to send will lie here.
 
 You should now have the necessary tools to start using Node-RED. Below, examples will follow.
 
-### Gathering weather data
+#### Example: Gathering weather data
 There are several ways to gather weather data. In this example, a HTTP request will be used. This is a service that is available in CoDeSys and e!Cockpit,
 but the data is easier to process in Node-RED.
 
