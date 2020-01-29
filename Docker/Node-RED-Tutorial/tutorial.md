@@ -1,5 +1,5 @@
 # Node-RED Tutorial
-If anything is unclear, please do not hesitate to contact me at [hakon.skaug@wago.com](mailto:hakon.skaug@wago.com)
+If anything is unclear, please do not hesitate to contact me at [hakon.skaug@wago.com](mailto:hakon.skaug@wago.com) or +47 22 30 94 78.
 
 “Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.” (www.nodered.org)
 Node-RED is special because it is, unlike other ways of programming, a more visual way of programming and knitting together different services.
@@ -9,7 +9,9 @@ With Node-RED, a PLC can easily be connected to smarter services that aren’t a
 For instance, the Google API, or YR XML weather forecast.
 
 This guide will show how Node-RED is installed with Docker, and introduce you to simple steps for programming.
-This guide assumes that you have already installed the latest firmware on your PLC, and the Docker.ipk.
+This guide assumes that you have already installed the latest firmware on your PLC, and the Docker.ipk. If you have not done this yet, see the other guide in this repo.
+
+See further exmaples below.
 
 ### First off:
 1.  Connect to your PLC through PuTTY (or a different SSH terminal).
