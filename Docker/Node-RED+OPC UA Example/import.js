@@ -1,9 +1,10 @@
+/*
 Example application for communication between the Node-Red interface and PFC200 via OPC UA. 
 The application pulls weather data from YR.no, and writes the formatted data to a PLC.
 
 
 Import the following JSON-text in the Node-Red:
-
+*/
 [
     {
         "id": "6af14984.743788",
