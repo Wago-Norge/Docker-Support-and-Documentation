@@ -5,5 +5,5 @@ also includes newer, less conventional and object-oriented approches. The meanin
 newer approches can be used, while still having the more traditional and "safe" ways as a base.
 
 <div align="center">
-  <img src="flow.png" >
+  <img src="Flow.PNG" >
 </div>
