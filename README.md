@@ -1,6 +1,6 @@
 # Startside
 ## Docker, Support and Documentation
->Dette repoet er tiltenkt å veilede, inspirere og å dokumentere nye og gamle konsepter med Wago. Det gjelder i hovedsak nye fremgangsmåter som har blitt muliggjort på grunn av Wagos nye generasjon med PLS'er. Repoet vil utforske og veilede nye fremgangsmåter ved bruk av Linux og Docker, men ikke bare det. Veiledningene her vil variere i vanskelighetsgrad, men vi forsøker å gjøre dette åpent for alle. For kontakt: se informasjon i bunnen.
+>Dette repoet er tiltenkt å veilede, inspirere og å dokumentere nye og gamle konsepter med Wago. Det gjelder i hovedsak nye fremgangsmåter som har blitt muliggjort av Wagos nye generasjon med PLS'er. Repoet vil utforske og veilede nye fremgangsmåter ved bruk av Linux og Docker, men ikke bare det. Veiledningene her vil variere i vanskelighetsgrad, men vi forsøker å gjøre dette åpent for alle. For kontakt: se informasjon i bunnen.
 
 ### Initiellt Oppsett
 
