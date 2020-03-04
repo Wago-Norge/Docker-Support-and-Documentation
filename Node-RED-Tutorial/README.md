@@ -11,7 +11,10 @@ For instance, the Google API, or YR XML weather forecast.
 This guide will show how Node-RED is installed with Docker, and introduce you to simple steps for programming.
 This guide assumes that you have already installed the latest firmware on your PLC, and the Docker.ipk. If you have not done this yet, see the other guide in this repo.
 
-See further exmaples below.
+Jesse Cox has a simple guide on installation [here](https://www.youtube.com/watch?v=GKaSwVC--w8), and another video on programming in Node-RED [here](https://www.youtube.com/watch?v=2bmWBU2xnHc).
+Kurt Braun has a quick guide on installing Node-RED [here](https://www.youtube.com/watch?v=NeVhWc4ReHc).
+
+See further examples below.
 
 ### First off:
 1.  Connect to your PLC through PuTTY (or a different SSH terminal).
@@ -131,3 +134,6 @@ The result is two msg objects that are very similar, except that their payloads 
 
 With this, we could easily pass specific values, for specific times, onwards. The values can instantly be sent to the PLCs’ environment e!Cockpit, or we could use
 them with logic in Node-RED. Node-RED can be easier to use, with regards to object-oriented programming, but e!Cockpit is more reliable when it comes to controlling.
+
+
+`Håkon Skaug`

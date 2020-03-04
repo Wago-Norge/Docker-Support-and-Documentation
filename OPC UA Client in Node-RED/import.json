@@ -1,5 +1,5 @@
 /*
-Example application for communication between the Node-Red interface and PFC200 via OPC UA. 
+Example application for communication between the Node-Red interface and PFC200 via OPC UA.
 The application pulls weather data from YR.no, and writes the formatted data to a PLC.
 
 

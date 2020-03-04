@@ -1,0 +1,2 @@
+#Visualisering/Trending in Grafana via e!Cockpit
+To use Grafana for trendning, we have to make data available to it. The easiest way to do this is currently via InfluxDB. This tutorial will explain how we can send data directly from e!Cockpit, without having to go via a third instance - like Node-RED. This tutorial is not yet finished, but please refer to the other guide, and use Node-RED, in the mean time. To install InfluxDB, we still have to use Docker. Refer to Installing Docker and Containers for documentation regarding this.

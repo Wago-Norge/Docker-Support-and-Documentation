@@ -7,8 +7,8 @@ Dette dokumentet skal beskrive måten man kan gå frem på for å kunne hente ka
 2.  Gå til: ```https://console.developers.google.com/```
 3.  Velg “Select a project”, og deretter “New Project”. Sett dette deretter opp slik du ønsker.
 4.  Øverst skal du nå kunne se at du er under ditt nye prosjekt. Rett under (“Dashboard”) skal du kunne trykke “Enable APIs and services”. Klikk her, og velg “Google Calendar API” lengre ned. Trykk “Enable”.
-5.  Trykk på “Google APIs” eller menyen øverst til venstre, og deretter “Dashboard”. 
-    Gå til “Credentials”, og trykk: “Create credentials” > “Service account key” > “New service account”: Skriv inn et passende navn og rolle. Velg “JSON” og deretter “Create”. 
+5.  Trykk på “Google APIs” eller menyen øverst til venstre, og deretter “Dashboard”.
+    Gå til “Credentials”, og trykk: “Create credentials” > “Service account key” > “New service account”: Skriv inn et passende navn og rolle. Velg “JSON” og deretter “Create”.
 6.  Du vil nå få forespørsel om å laste ned en JSON-fil. Dette er en tekststring som inneholder autentiseringen for å nå kalenderen. Denne stringen skal limes inn i en node i neste del i Node-Red.
 7.  Til slutt må du ha en kalender som du ønsker å bruke i prosjektet. Gå til: ```https://calendar.google.com/calendar/r```
     Hvis du ikke har en spesifikk kalender fra før: opprett en ny.
@@ -22,8 +22,8 @@ Dette dokumentet skal beskrive måten man kan gå frem på for å kunne hente ka
     Under menyen øverst til høyre: velg “Import”.
     Importer ved å kopiere inn JSON-stringen som er inkludert i denne mappen: ```import.txt```.
 2.  Installer biblioteket:
-    Under menyen øverst til høyre: velg “Manage Palettes”. 
-    Klikk “Install”, og søk opp riktig palette: ```node-red-contrib-google```. 
+    Under menyen øverst til høyre: velg “Manage Palettes”.
+    Klikk “Install”, og søk opp riktig palette: ```node-red-contrib-google```.
 3.  Sett opp “google”-noden:
     Sørg for at API står som “calendar:v3” (med mindre du ønsker å bruke andre APIer).
     Operation kan velges til “events.list”. Her kan man velge andre operations, etter hva som passer. (Dette vil gi forskjellige             resultater. Events.list vil gi oss en array av nåværende og kommende eventer.
@@ -53,9 +53,12 @@ msg.payload = {
 ```
 Disse kan være nyttige parametre for å filtrere resultatet som mottas fra Google. KalenderID er hvilken kalender du er koblet til. timeMin og timeMax filtrerer ut resultater utenfor dette tidsperspektive. Du kan gjerne bare bruke én av disse. orderBy sorterer resultatene etter når de starter - ikke når de ble laget.
 
-Tips: 
+Tips:
 -   API'et foretrekker å få tiden gitt i formatet ovenfor. Ved å bruke biblioteket node-red-contrib-moment kan du enkelt formatere tiden slik, i tillegg til å kunne justere tiden for tidssoner, sommer- og vintertid, og lignende.
 
-For hjelp: 
+For hjelp:
 -   https://developers.google.com/calendar/v3/reference/events/list
 -   Klikk deg inn på Documentation-noden
+
+
+`Håkon Skaug` [Mail](mailto:hakon.skaug@wago.com)

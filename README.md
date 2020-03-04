@@ -1,5 +1,6 @@
-# Veiledning og Inspirasjon
->Dette repoet er tiltenkt å veilede igjennom både dokumentasjon og videoer, samt inspirere ved å linke til nye konsepter illustrert av ivrige Wago-videobloggere. Repoet inneholder også en kjapp veiledning for igangsetting av Wago PLS'er, i tillegg til veiledning rundt viderekommen bruk.
+# Startside
+## Docker, Support and Documentation
+>Dette repoet er tiltenkt å veilede, inspirere og å dokumentere nye og gamle konsepter med Wago. Det gjelder i hovedsak nye fremgangsmåter som har blitt muliggjort på grunn av Wagos nye generasjon med PLS'er. Repoet vil utforske og veilede nye fremgangsmåter ved bruk av Linux og Docker, men ikke bare det. Veiledningene her vil variere i vanskelighetsgrad, men vi forsøker å gjøre dette åpent for alle. For kontakt: se informasjon i bunnen.
 
 ### Initiellt Oppsett
 
@@ -57,7 +58,6 @@ Wago Tyskland har også laget en fin samling med [how-to's](https://github.com/W
 
 
 ### Kontaktinformasjon
-
 
 Vår tekniske supportavdeling har telefontid hverdager 8-16, hele året utenom helligdager.
 
