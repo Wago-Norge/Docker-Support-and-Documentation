@@ -1,12 +1,6 @@
 tempIn := REAL_TO_INT(temp_inside / 10.0);
 tempOut := REAL_TO_INT(temp_outside / 10.0);
 
-IF IoConfig_Globals_Mapping.Port = FALSE THEN
-	portStatus := "Port lukket.";
-ELSE
-	portStatus := "Port åpen.";
-END_IF
-
 //Exception in case of snow/ice
 IF hour1.ice = TRUE OR hour2.ice = TRUE THEN
 	PLC_PRG.exception := TRUE;
@@ -15,7 +9,7 @@ ELSE
 END_IF
 
 //If ground is wet, but might freeze later.
-IF hour1.rain > 0 AND hour1.temp > 0 THEN
+IF exception = FALSE AND hour1.rain > 0 AND hour1.temp > 0 THEN
 	IF hour2.temp < 0 OR hour3.temp < 0 THEN
 		PLC_PRG.exception := TRUE;
 	ELSE
@@ -33,7 +27,7 @@ ELSE IF hour2.rain > 0 AND hour2.temp < 0 THEN
 		PLC_PRG.run := TRUE;
 		ELSE
 			PLC_PRG.run := FALSE;
-		END_IF	
+		END_IF
 	 END_IF
 END_IF
 
@@ -121,4 +115,4 @@ PLC_PRG.kWh1 := DWORD_TO_REAL(PLC_PRG.timeMin1)*300/(1000*60.0);
 PLC_PRG.kWh2 := DWORD_TO_REAL(PLC_PRG.timeMin2)*300/(1000*60.0);
 PLC_PRG.kWh3 := DWORD_TO_REAL(PLC_PRG.timeMin3)*300/(1000*60.0);
 PLC_PRG.kWh4 := DWORD_TO_REAL(PLC_PRG.timeMin4)*300/(1000*60.0);
-PLC_PRG.kWhTotal := PLC_PRG.kWh1 + PLC_PRG.kWh2 + PLC_PRG.kWh3 + PLC_PRG.kWh4; 
+PLC_PRG.kWhTotal := PLC_PRG.kWh1 + PLC_PRG.kWh2 + PLC_PRG.kWh3 + PLC_PRG.kWh4 + kWh_charger;

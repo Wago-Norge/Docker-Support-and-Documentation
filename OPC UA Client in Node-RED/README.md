@@ -1,9 +1,9 @@
-#Using Node-RED as a OPC UA Client
+# Using Node-RED as a OPC UA Client
 This document will explain the use of OPC UA in Node Red. The example flow that will be used here will read a virtual value off of an UaExpert Cpp demo server. The message string that is read, will then be formatted, so that it can be written to a different float variable on the OPC server hosted on the Wago PFC200.
 
 There are several uses for OPC UA. For example sending data from the e!Cockpit environment, to
 
-###Prerequisites
+### Prerequisites
 This guide assumes that an OPC server has been created on the Wago PFC. The OPC UA demo server is used to be able to read a dynamic value - but you can use any variable that you would like. Use an arbitrary OPC client/explorer (Like UaExpert) to obtain NodeIDs for the variable you want to use.
 
 

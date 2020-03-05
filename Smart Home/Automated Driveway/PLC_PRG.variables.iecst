@@ -1,30 +1,27 @@
 PROGRAM PLC_PRG
 VAR
-
 	incomingRain : REAL;
 	tempIn : INT;
 	tempOut : INT;
 	forecastTemp : INT;
 	forecastRain : REAL;
-	portStatus : WSTRING;
-	
+
 	xEnableManual : BOOL := FALSE;
 	xEnableAuto : BOOL := FALSE;
 	autoOn : BOOL;
 	heatOn : BOOL;
 	exception : BOOL;
-	
+
 	preTime : TIME := T#4H;   		//Predefined time for manual heating
 	autoTime : TIME := T#90M; 		//Predefined time for when heating will start before snow/ice
 	onTime : TIME;
 	offTime : TIME;
-	
-	
+
 	hour1 : WeatherData;
 	hour2 : WeatherData;
 	hour3 : WeatherData;
 	hour4 : WeatherData;
-	
+
 	run : BOOL;
 	manual1 : BOOL := FALSE;
 	manual2 : BOOL := FALSE;
@@ -42,12 +39,7 @@ VAR
 	mode2 : SINT := 3;
 	mode3 : SINT := 3;
 	mode4 : SINT := 3;
-	kWh1 : REAL;
-	kWh2 : REAL;
-	kWh3 : REAL;
-	kWh4 : REAL;
-	kWhTotal : REAL;
-	
+
 	auto: TOF;
 	manTON: TON;
 	manTON1: TON;
@@ -63,6 +55,13 @@ VAR
 	timer2: WagoAppBuildingHVAC.FbOperatingHours_01;
 	timer3: WagoAppBuildingHVAC.FbOperatingHours_01;
 	timer4: WagoAppBuildingHVAC.FbOperatingHours_01;
+	charger_timer: WagoAppBuildingHVAC.FbOperatingHours_01;
+	charger_powerMeasure: WagoAppPowerMeasurement.FbAC_Values_494;
+	charger_powerTime: WagoAppBuildingHVAC.FbOperatingHours_01;
+
+	powerMeter: BASIC.METER;
+	reset_charger: BOOL;
+
 END_VAR
 VAR RETAIN PERSISTENT
 	time1 : DWORD;
@@ -73,4 +72,11 @@ VAR RETAIN PERSISTENT
 	timeMin2 : DWORD;
 	timeMin3 : DWORD;
 	timeMin4 : DWORD;
+	timeMin_charger: DWORD;
+	kWh1 : REAL;
+	kWh2 : REAL;
+	kWh3 : REAL;
+	kWh4 : REAL;
+	kWh_charger: REAL;
+	kWhTotal : REAL;
 END_VAR

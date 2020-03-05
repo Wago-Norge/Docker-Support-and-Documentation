@@ -5,7 +5,7 @@ also includes newer, less conventional and object-oriented approaches. The meani
 newer approches can be used, while still having the more traditional and "safe" ways as a base.
 
 <div align="center">
-  <img src="Flow.PNG" >
+  <img src="img/Flow.PNG" >
 </div>
 
 
