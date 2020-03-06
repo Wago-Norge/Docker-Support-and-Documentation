@@ -1,3 +1,4 @@
+//Import the following JSON-text in the Node-Red:
 [
     {
         "id": "5b5e5bf.50d81a4",
