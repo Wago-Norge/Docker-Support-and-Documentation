@@ -23,9 +23,8 @@ To make data available to Grafana, we need to setup Influx. After installing Inf
 The database is called 'mydb' and the measurement is called 'table01' in our tutorial.
 
 Thereafter you can use the following commands to verify that you have a database correctly set up:
-<div align="center">
-   <br>
-  <img src="img\Influx-shell.png"><br><br>
+<div align="left">
+  <img src="img\Influx-shell.PNG" width=""><br><br>
 </div>
 The database should now be reachable under localhost:8086.
 
@@ -35,18 +34,18 @@ Go to your PLC's IP address, and add ```:1880```. Like ```192.168.1.17:1880```
 
 <div align="center">
    <br>
-  <img src="img\Node-RED-to-influx.png"><br><br>
+  <img src="img\Node-RED-to-influx.PNG"><br><br>
 </div>
 In this example we have used two interval inject nodes that activates two random number generators. These are activated every 15 seconds, and have a name specified under Topic. These will serve as our data sources. The random number will be entered in msg.payload.
 <div align="right">
    <br>
-  <img src="img\Node-RED-inject.png"><br><br>
+  <img src="img\Node-RED-inject.PNG"><br><br>
 </div>
 
 The Join-node will thereafter wait for a predetermined number of sourcer (here 2), and then output a list/array of every input. The output will look like this:
 <div align="center">
    <br>
-  <img src="img\Node-RED-influx-debug.png"><br><br>
+  <img src="img\Node-RED-influx-debug.PNG"><br><br>
 </div>
 To see how the join node is set up on our side, use `import.json`.
 
@@ -61,7 +60,7 @@ Enter `admin` as username, and `admin` as password. Change the password as you l
 Firstly we need to add a data source. Simply choose InfluxDB, and enter the necessary data as so:
 <div align="center">
    <br>
-  <img src="img\Grafana-Influx-setup.png"><br><br>
+  <img src="img\Grafana-Influx-setup.PNG"><br><br>
 </div>
 
 ### Adding a query
