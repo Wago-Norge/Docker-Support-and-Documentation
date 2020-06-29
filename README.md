@@ -1,7 +1,5 @@
 # Velkommen til Wagos GitHub!
 Hei! Velkommen til Wago Norges repo for Linux, Docker og andre eksempler. Vi ønsker å kunne hjelpe våre brukere best til å komme i gang med våre produkter, og våre nye konsepter. For å best mulig kunne hjelpe deg, setter vi stor pris på tilbakemelding. Noe av det som allerede ligger her, er konsepter som andre kunder har vært nysgjerrige på - og som vi derfor har laget veiledninger på. Har du noen prosjekter som du jobber med, eller spørsmål til Wago, som vi kanskje kan hjelpe deg med? Ta gjerne kontakt! (Se info i bunnen her).
-PS: De fleste av oss i Wago er nå på hjemmekontor. Ta gjerne kontakt med oss på mobiltelefon.
-PPS: For spørsmål om Linux, Docker eller dette repoet - kontakt gjerne Håkon Skaug.
 
 
 >Dette repoet er tiltenkt å veilede, inspirere og å dokumentere nye og gamle konsepter med Wago. Det gjelder i hovedsak nye fremgangsmåter som har blitt muliggjort av Wagos nye generasjon med PLS'er. Repoet vil utforske og veilede nye fremgangsmåter ved bruk av Linux og Docker, men ikke bare det. Veiledningene her vil variere i vanskelighetsgrad, men vi forsøker å gjøre dette åpent for alle. For kontakt: se informasjon i bunnen.
