@@ -5,13 +5,15 @@ VAR
 	tempOut : INT;
 	forecastTemp : INT;
 	forecastRain : REAL;
-
+	temp_inside	: REAL;
+	temp_outside : REAL;
+	
 	xEnableManual : BOOL := FALSE;
 	xEnableAuto : BOOL := FALSE;
 	autoOn : BOOL;
 	heatOn : BOOL;
 	exception : BOOL;
-
+	
 	preTime : TIME := T#4H;   		//Predefined time for manual heating
 	autoTime : TIME := T#90M; 		//Predefined time for when heating will start before snow/ice
 	onTime : TIME;
@@ -21,7 +23,7 @@ VAR
 	hour2 : WeatherData;
 	hour3 : WeatherData;
 	hour4 : WeatherData;
-
+	
 	run : BOOL;
 	manual1 : BOOL := FALSE;
 	manual2 : BOOL := FALSE;
@@ -39,7 +41,10 @@ VAR
 	mode2 : SINT := 3;
 	mode3 : SINT := 3;
 	mode4 : SINT := 3;
-
+	(*
+	DO1,DO2,DO3,DO4 : BOOL;
+	DI1,DI2,DI3,DI4 : BOOL; *)
+	
 	auto: TOF;
 	manTON: TON;
 	manTON1: TON;
@@ -62,6 +67,10 @@ VAR
 	powerMeter: BASIC.METER;
 	reset_charger: BOOL;
 
+	kW_Total : REAL;
+	kW_Heating : REAL;
+	kW_Charger : REAL;	
+	
 END_VAR
 VAR RETAIN PERSISTENT
 	time1 : DWORD;
@@ -72,11 +81,12 @@ VAR RETAIN PERSISTENT
 	timeMin2 : DWORD;
 	timeMin3 : DWORD;
 	timeMin4 : DWORD;
-	timeMin_charger: DWORD;
+	timeMin_charger: DWORD;	
 	kWh1 : REAL;
 	kWh2 : REAL;
 	kWh3 : REAL;
 	kWh4 : REAL;
-	kWh_charger: REAL;
-	kWhTotal : REAL;
+	kWh_Heating : REAL;
+	kWh_Charger: REAL;
+	kWh_Total : REAL;
 END_VAR
