@@ -1,0 +1,9 @@
+//CoDeSys Mapping Export V1.2
+//Mapped variable;//Parameter name @ counter in device;//Unit;//Description;//IEC address;//Device name;
+//Important: change only first, third or fourth column in Excel or add variable name before first ;
+;K-BUS diagnostics;;K-BUS diagnostics;%IB1;Kbus
+;K-BUS error;;K-BUS general error flag;%IX1.0;Kbus
+myVar2;_IN;unit;desc;%IB0;_1RO_230_VAC_16A_Pot_free_Relay1NO
+;_DIA;;Diagnostic bit;%IX0.0;_1RO_230_VAC_16A_Pot_free_Relay1NO
+;_OUT;;Output Channels;%QB0;_1RO_230_VAC_16A_Pot_free_Relay1NO
+;_OUT@1;;Digital output;%QX0.0;_1RO_230_VAC_16A_Pot_free_Relay1NO
