@@ -1,37 +1,37 @@
 [
     {
-        "id": "9b3ba4f3.d92d88",
+        "id": "72e8136b.e0ba0c",
         "type": "tab",
-        "label": "Flow 3",
+        "label": "Weather",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "8bc9865a.707f28",
+        "id": "d7d745dc.2aad08",
         "type": "function",
-        "z": "9b3ba4f3.d92d88",
+        "z": "72e8136b.e0ba0c",
         "name": "parse()",
         "func": "\nvar numberOfHours = 3;\nvar i = 0;\nvar forecasts = new Array(numberOfHours); //Array consisting of imminent forecasts, hour by hour\n//Symbol list from YR - every precipitation category\nvar yrSymbols = new Array(\"12\", \"13\", \"14\", \"23\", \"31\", \"32\", \"33\", \"34\", \"47\", \"48\", \"49\", \"50\", \"42d\", \"07d\", \"43d\", \"44d\", \"08d\", \"45d\", \"26d\", \"20d\", \"27d\", \"28d\", \"21d\", \"29d\", \"42n\", \"07n\", \"43n\", \"44n\", \"08n\", \"45n\", \"26n\", \"20n\", \"27n\", \"28n\", \"21n\", \"29n\", \"42m\", \"07m\", \"43m\", \"44m\", \"08m\", \"45m\", \"26m\", \"20m\", \"27m\", \"28m\", \"21m\", \"29m\");\n\n\n//void fillHour(j);\nfunction fillHour(i){\n    forecasts[i].hour = i+1;\n    forecasts[i].temp = msg.payload.weatherdata.forecast[0].tabular[0].time[i].temperature[0].$.value;\n    forecasts[i].rain = msg.payload.weatherdata.forecast[0].tabular[0].time[i].precipitation[0].$.value;\n    forecasts[i].rainType = msg.payload.weatherdata.forecast[0].tabular[0].time[i].symbol[0].$.number;\n    \n    for (var k = 0; k < yrSymbols.length; k++){\n        if(forecasts[i].rainType === yrSymbols[k]){\n            forecasts[i].rainType = \"snow inbound\";\n        }\n    }\n    if(forecasts[i].rainType != \"snow inbound\") forecasts[i].rainType = \"no snow\";\n    \n}\n\nfor (i = 0; i < numberOfHours; i++){\n    //Format every forecast object\n    forecasts[i] = {\n        hour: 0,\n        temp: 0,\n        rain: 0,\n        rainType: \"no snow\",\n        ice: false\n    }\n    //Fill forecast with information\n    fillHour(i);\n}\n\n\n\n//Puts every forecast into\nmsg.payload = forecasts;\n\nreturn [forecasts[0], forecasts[1], forecasts[2]];",
         "outputs": 3,
         "noerr": 0,
-        "x": 220,
-        "y": 360,
+        "x": 280,
+        "y": 340,
         "wires": [
             [
-                "6ccb8a2c.153574"
+                "f6885319.8887"
             ],
             [
-                "6ccb8a2c.153574"
+                "f6885319.8887"
             ],
             [
-                "6ccb8a2c.153574"
+                "f6885319.8887"
             ]
         ]
     },
     {
-        "id": "6e8fb4e9.300f5c",
+        "id": "b0d3116d.60236",
         "type": "inject",
-        "z": "9b3ba4f3.d92d88",
+        "z": "72e8136b.e0ba0c",
         "name": "",
         "topic": "",
         "payload": "",
@@ -40,18 +40,18 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 140,
-        "y": 160,
+        "x": 160,
+        "y": 120,
         "wires": [
             [
-                "79365f39.6708"
+                "9564bbe5.2c5538"
             ]
         ]
     },
     {
-        "id": "79365f39.6708",
+        "id": "9564bbe5.2c5538",
         "type": "http request",
-        "z": "9b3ba4f3.d92d88",
+        "z": "72e8136b.e0ba0c",
         "name": "",
         "method": "GET",
         "ret": "txt",
@@ -61,34 +61,50 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 310,
-        "y": 160,
+        "x": 330,
+        "y": 120,
         "wires": [
             [
-                "420ab835.cb2ac8"
+                "a8a7951a.77b338"
             ]
         ]
     },
     {
-        "id": "420ab835.cb2ac8",
+        "id": "a8a7951a.77b338",
         "type": "xml",
-        "z": "9b3ba4f3.d92d88",
+        "z": "72e8136b.e0ba0c",
         "name": "",
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 490,
-        "y": 160,
+        "x": 510,
+        "y": 120,
         "wires": [
             [
-                "8bc9865a.707f28"
+                "d7d745dc.2aad08"
             ]
         ]
     },
     {
-        "id": "7d4fcadb.0267a4",
+        "id": "f6885319.8887",
+        "type": "function",
+        "z": "72e8136b.e0ba0c",
+        "name": "split()",
+        "func": "   ",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 340,
+        "wires": [
+            [
+                "c7c8b032.9d595"
+            ]
+        ]
+    },
+    {
+        "id": "28721d60.a340b2",
         "type": "debug",
-        "z": "9b3ba4f3.d92d88",
+        "z": "72e8136b.e0ba0c",
         "name": "print",
         "active": true,
         "tosidebar": true,
@@ -96,44 +112,29 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 590,
-        "y": 300,
+        "x": 730,
+        "y": 260,
         "wires": []
     },
     {
-        "id": "6bd8cf5f.1eed9",
+        "id": "c7c8b032.9d595",
         "type": "OPCUA-IIoT-Write",
-        "z": "9b3ba4f3.d92d88",
-        "connector": "61fb5d59.505fa4",
+        "z": "72e8136b.e0ba0c",
+        "connector": "d18c2c96.aafe1",
         "name": "",
         "justValue": true,
         "showStatusActivities": false,
         "showErrors": false,
-        "x": 590,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6ccb8a2c.153574",
-        "type": "function",
-        "z": "9b3ba4f3.d92d88",
-        "name": "split()",
-        "func": "var items = new Array(4);\nvar values  = new Array(4);\nvalues[0] = String(msg.temp);\nvalues[1] = String(msg.rain);\nvalues[2] = msg.rainType;\nvalues[3] = msg.ice;\nitems[0] = \n{\n    name: \"Hour\"+String(msg.hour)+\".temp\",\n    nodeId: \"ns=4;s=|var|IoT-Twin.Application.PLC_PRG.hour\"+String(msg.hour)+\".temp\",\n    datatypeName: \"Int16\"\n}\nitems[1] =\n{\n    name: \"Hour\"+String(msg.hour)+\".rain\",\n    nodeId: \"ns=4;s=|var|IoT-Twin.Application.PLC_PRG.hour\"+String(msg.hour)+\".rain\",\n    datatypeName: \"Float\"\n}\nitems[2] = \n{\n    name: \"Hour\"+String(msg.hour)+\".rainType\",\n    nodeId: \"ns=4;s=|var|IoT-Twin.Application.PLC_PRG.hour\"+String(msg.hour)+\".rainType\",\n    datatypeName: \"String\"\n},\nitems[3] =\n{\n    name: \"Hour\"+String(msg.hour)+\".ice\",\n    nodeId: \"ns=4;s=|var|PFC200_IoT.Application.PLC_PRG.hour\"+String(msg.hour)+\".ice\",\n    datatypeName: \"Boolean\"\n}\n\nmsg = {\n    payload: {\n        hour: msg.hour,\n        temp: msg.temp,\n        rain: msg.rain,\n        rainType: msg.rainType,\n        ice: msg.ice\n    },\n    nodetype: \"node\",\n    injectType: \"write\",\n    addressSpaceItems: items,\n    valuesToWrite: values,\n    topic: msg.topic,\n    _msgid: msg._msgid\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 410,
-        "y": 360,
+        "x": 570,
+        "y": 340,
         "wires": [
             [
-                "6bd8cf5f.1eed9",
-                "7d4fcadb.0267a4"
+                "28721d60.a340b2"
             ]
         ]
     },
     {
-        "id": "61fb5d59.505fa4",
+        "id": "d18c2c96.aafe1",
         "type": "OPCUA-IIoT-Connector",
         "z": "",
         "discoveryUrl": "opc.tcp://localhost:4840/",
