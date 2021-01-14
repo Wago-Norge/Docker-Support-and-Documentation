@@ -1,0 +1,4 @@
+This E!Cockput Archive contains a demo of publishing and subscribing via MQTT. It contains all necessary libraries as well.
+The subscription program has not been added to the Task Configuration in this example - but can simply be added if wanted.
+
+https://www.dropbox.com/s/3jkdgp1djguvbw1/MQTT-PubSub-Example.eca?dl=0
