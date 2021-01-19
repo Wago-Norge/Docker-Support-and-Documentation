@@ -11,7 +11,8 @@ Port: 1883
 Data protocol: Native MQTT
 Cache mode: RAM
 ```
-Certificates and TLS should be included for more security.
+Certificates and TLS should be included for more security. 
+Additionally, most IoT- and cloud platforms use TLS and port 8883 for more secure connection.
 
 Here is an example of a PLC that is connected to Shiftr:
 <div align="left">
