@@ -1,0 +1,135 @@
+[
+    {
+        "id": "dd0d7511.bd82a8",
+        "type": "tab",
+        "label": "Electricity Prices",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "af5c37e1.34c578",
+        "type": "nordpool-api",
+        "z": "dd0d7511.bd82a8",
+        "area": "Oslo",
+        "currency": "NOK",
+        "timeSpan": "hourly",
+        "x": 280,
+        "y": 880,
+        "wires": [
+            [
+                "cc675f75.eea59"
+            ]
+        ]
+    },
+    {
+        "id": "8531f7f0.b8afe8",
+        "type": "inject",
+        "z": "dd0d7511.bd82a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 880,
+        "wires": [
+            [
+                "af5c37e1.34c578"
+            ]
+        ]
+    },
+    {
+        "id": "2fa28a0c.6f1b86",
+        "type": "debug",
+        "z": "dd0d7511.bd82a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "cc675f75.eea59",
+        "type": "function",
+        "z": "dd0d7511.bd82a8",
+        "name": "toSimpleArray",
+        "func": "prices = new Array(24);\nfor(var i=0;i<24;i++){\n    prices[i] = msg.payload[i].Price;\n    prices[i] = parseInt(prices[i]);\n    prices[i] = parseFloat(prices[i]);\n    prices[i] /= 1000;\n}\n\nmsg.payload = prices;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 880,
+        "wires": [
+            [
+                "2fa28a0c.6f1b86",
+                "39532114.9daf1e"
+            ]
+        ]
+    },
+    {
+        "id": "aa30d96.b476528",
+        "type": "OpcUa-Client",
+        "z": "dd0d7511.bd82a8",
+        "endpoint": "d05da646.b8a328",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "Publish to OPC UA",
+        "x": 870,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "39532114.9daf1e",
+        "type": "OpcUa-Item",
+        "z": "dd0d7511.bd82a8",
+        "item": "ns=4;s=|var|WAGO 750-8214 PFC200 G2 2ETH RS CAN.Application.GVL.intraday_prices",
+        "datatype": "Float Array",
+        "value": "",
+        "name": "intraday_prices : ARRAY[0..23] OF REAL;",
+        "x": 780,
+        "y": 920,
+        "wires": [
+            [
+                "aa30d96.b476528"
+            ]
+        ]
+    },
+    {
+        "id": "d05da646.b8a328",
+        "type": "OpcUa-Endpoint",
+        "z": "",
+        "endpoint": "opc.tcp://10.0.0.106:4840",
+        "secpol": "None",
+        "secmode": "None",
+        "login": true
+    }
+]

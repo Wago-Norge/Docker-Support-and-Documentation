@@ -23,7 +23,9 @@ Subsequently, the new firmware should be copied to the internal flash memory.
 - Make sure your computer has an SSH Client, for example [Putty](https://www.putty.org).
 
 
-
+## BEFORE YOU START
+When you are done installing, check out `Installing Docker on SD card`, if you would like to expand the storage space. 
+This needs to be done with a clean installation of Docker. 
 
 
 ----------------------------------------------------------------------------------------
